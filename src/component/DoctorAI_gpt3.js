@@ -14,7 +14,7 @@ require('dotenv').config()
 const { Configuration, OpenAIApi } = require("openai");
 const neo4j = require('neo4j-driver')
 
-const driver = neo4j.driver("", neo4j.auth.basic(process.env.REACT_APP_NEO4JUSER, process.env.REACT_APP_NEO4JPASSWORD))
+const driver = neo4j.driver(process.env.REACT_APP_NEO4JURI, neo4j.auth.basic(process.env.REACT_APP_NEO4JUSER, process.env.REACT_APP_NEO4JPASSWORD))
 const target_language = process.env.REACT_APP_LANGUAGE
 
 
