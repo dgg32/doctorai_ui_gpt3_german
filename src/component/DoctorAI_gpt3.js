@@ -14,9 +14,11 @@ require('dotenv').config()
 const { Configuration, OpenAIApi } = require("openai");
 const neo4j = require('neo4j-driver')
 
-const driver = neo4j.driver(process.env.REACT_APP_NEO4JURI, neo4j.auth.basic(process.env.REACT_APP_NEO4JUSER, process.env.REACT_APP_NEO4JPASSWORD))
+const driver = neo4j.driver("", neo4j.auth.basic(process.env.REACT_APP_NEO4JUSER, process.env.REACT_APP_NEO4JPASSWORD))
 const target_language = process.env.REACT_APP_LANGUAGE
 
+
+//const target_language = "Chinese"
 //const target_language = "German"
 //const target_language = "Japanese"
 const lang_p = language_parameters(target_language)
@@ -110,7 +112,7 @@ MATCH (d:Disease)-[:localizes]->(a:Anatomy) WHERE a.name =~ '(?i)frontal sinus' 
 
 #`;
 
-      let search = await callTranslate("Faithfully translate this " + lang_p['target_language'] + " into English\n\n" + search_raw);
+      let search = await callTranslate("Translate this " + lang_p['target_language'] + " into English\n\n" + search_raw);
 
       //let search = "Tell me something about the disease called COVID-19?";
 
@@ -148,9 +150,10 @@ MATCH (d:Disease)-[:localizes]->(a:Anatomy) WHERE a.name =~ '(?i)frontal sinus' 
 
             //textToSpeak = singleRecord.get(0)
             textToSpeak = textToSpeak.slice(0, -2).trim()
-            console.log("before translation " + " Faithfully translate this English to " + lang_p['target_language'] + "\n\n" + textToSpeak)
+            console.log("before translation " + "Translate this into " + lang_p['target_language'] + "\n\n" + textToSpeak)
             textToSpeak = await callTranslate("Translate this into " + lang_p['target_language'] + "\n\n" + textToSpeak);
             textToSpeak = textToSpeak.trim()
+            console.log("after translation " + textToSpeak)
 
           } finally {
             //await session.close()

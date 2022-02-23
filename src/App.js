@@ -5,6 +5,7 @@ import DoctorAI from './component/DoctorAI_gpt3';
 import language_parameters from './component/language_setting';
 
 const target_language = process.env.REACT_APP_LANGUAGE
+//const target_language = "Chinese"
 //const target_language = "Japanese"
 const lang_p = language_parameters(target_language)
 
