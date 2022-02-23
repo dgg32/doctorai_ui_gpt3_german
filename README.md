@@ -1,6 +1,6 @@
 # Welcome to Doctor.ai React Front-end 
 
-This is the React front-end app for multilingual Doctor.ai [Can Doctor.ai understand German, Chinese and Japanese? GPT-3 Answers: Ja, 一点点 and できます!](https://dgg32.medium.com/can-doctor-ai-understand-german-chinese-and-japanese-gpt-3-answers-ja-%E5%8F%AF%E4%BB%A5-and-%E3%81%84%E3%81%84%E3%82%88-b63b10d67bf4), our proud submission to the SINGAPORE HEALTHCARE AI DATATHON AND EXPO 2021 (https://www.nus-datathon.com/).
+This is the React front-end app for multilingual Doctor.ai [Can Doctor.ai understand German, Chinese and Japanese? GPT-3 Answers: Ja, 一点点 and できます!](https://dgg32.medium.com/can-doctor-ai-understand-german-chinese-and-japanese-gpt-3-answers-ja-%E5%8F%AF%E4%BB%A5-and-%E3%81%84%E3%81%84%E3%82%88-b63b10d67bf4).
 
 
 
