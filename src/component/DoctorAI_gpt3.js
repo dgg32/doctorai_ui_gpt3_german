@@ -17,7 +17,7 @@ const neo4j = require('neo4j-driver')
 const driver = neo4j.driver(process.env.REACT_APP_NEO4JURI, neo4j.auth.basic(process.env.REACT_APP_NEO4JUSER, process.env.REACT_APP_NEO4JPASSWORD))
 const target_language = process.env.REACT_APP_LANGUAGE
 
-const target_language = "German"
+//const target_language = "German"
 //const target_language = "Japanese"
 const lang_p = language_parameters(target_language)
 
